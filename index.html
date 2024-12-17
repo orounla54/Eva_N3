@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            color: #333;
+        }
+        header {
+            background-color: #2196F3;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #BBDEFB;
+        }
+        section {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            background: white;
+            margin: 1rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #home {
+            background: linear-gradient(135deg, #2196F3, #64B5F6);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 0;
+        }
+        #home h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        #home p {
+            font-size: 1.2rem;
+        }
+        #home video {
+            margin-top: 2rem;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 2rem;
+            color: #2196F3;
+            margin-bottom: 1rem;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        #work ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #work ul li {
+            margin: 1rem 0;
+        }
+        #work ul li a {
+            color: #2196F3;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        #work ul li a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 90%;
+            margin: 2rem auto;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 1rem;
+        }
+        th {
+            background-color: #2196F3;
+            color: white;
+            font-weight: bold;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #1976D2;
+        }
+        footer {
+            background-color: #2196F3;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin: 0.5rem 0;
+        }
+        footer audio {
+            margin-top: 1rem;
+        }
+        #about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 2rem;
+        }
+        #about h2 {
+            color: #1976D2;
+        }
+        #about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.5rem;
+        }
+        #about p {
+            max-width: 800px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        #about a {
+            color: #1976D2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #about a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Bienvenue dans Mon Portfolio</h1>
+        <video controls width="1000">
+            <source src="video.webm" type="video/mp4">
+            Votre navigateur ne prend pas en charge la balise vidéo.
+        </video>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Un peu sur moi</h2>
+        <img src="image.png" alt="Profile Picture">
+        <p>
+            Bonjour ! Je m'appelle Arsène et je suis un développeur Web passionné par le développement et la conception front-end. Je suis actuellement étudiant à
+            <a href="https://gomycode.com/ic/fr/" target="_blank">Gomycode</a> et je prépare un diplôme en <a href="#" target="_blank">Information Science</a> avec une spécialisation en conception d'interaction. J'aspire à une carrière qui me permettra de canaliser ma créativité en créant de beaux logiciels et des expériences engageantes.
+            <br><br>
+            Quand je ne suis pas sur l'ordinateur, j'aime faire du câblage réseau et être avec mes amis.
+        </p>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work">
+        <h2>Ce que j'ai fais</h2>
+        <ul>
+            <li>Project 1: Conception d'un CRM de gestion commercial <a href="projects/crm.html">View Details</a></li>
+            <li>Project 2: Conception du site internet de TRAFRULE SA <a href="projects/hms.html">View Details</a></li>
+            <li>Project 3: Conception du site internet de MASTER INFORMATIQUE <a href="projects/portfolio.html">View Details</a></li>
+        </ul>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Année</th>
+                    <th>Poste</th>
+                    <th>Entreprise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024 - Present</td>
+                    <td>En formation de developpement web</td>
+                    <td>Gomycode</td>
+                </tr>
+                <tr>
+                    <td>2022 - 2023</td>
+                    <td>Chargé Support IT</td>
+                    <td>TRAFRULE SA</td>
+                </tr>
+                <tr>
+                    <td>2021 - 2022</td>
+                    <td>Stagiaire developpement Web</td>
+                    <td>MASTER INFORMATIQUE</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contactez moi</h2>
+        <form action="contact/submit" method="post">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Portfolio de OROUNLA Arsène. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
